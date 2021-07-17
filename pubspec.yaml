@@ -1,6 +1,7 @@
 name: reactives
 description: Hooks but for and of Flutter.
 version: 0.0.1
+repository: https://github.com/ripemango/reactives
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
