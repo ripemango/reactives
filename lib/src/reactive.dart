@@ -21,9 +21,7 @@ abstract class Reactive with Diagnosticable {
 
   @protected
   @mustCallSuper
-  void dispose() {
-    host.removeController(this);
-  }
+  void dispose() {}
 
   void didUpdateWidget(covariant StatefulWidget oldWidget) {}
 
@@ -133,6 +131,7 @@ mixin ReactiveHostMixin<T extends StatefulWidget> on State<T>
     for (final ctrl in reactives) {
       ctrl.dispose();
     }
+    reactives.clear();
     super.dispose();
   }
 }
