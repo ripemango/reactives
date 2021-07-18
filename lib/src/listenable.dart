@@ -2,12 +2,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'reactive.dart';
 
-class ListenableReactive<T extends Listenable> extends Reactive {
+class ReactiveListenable<T extends Listenable> extends Reactive {
   final T listenable;
   final bool listen;
   final VoidCallback? listener;
 
-  ListenableReactive(
+  ReactiveListenable(
     ReactiveHost host,
     this.listenable, {
     this.listen = false,

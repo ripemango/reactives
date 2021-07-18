@@ -60,10 +60,10 @@ class AwesomeReactiveWidget extends StatefulWidget {
 }
 
 class _AwesomeReactiveWidgetState extends State<AwesomeReactiveWidget> with ReactiveHostMixin {
-  late final emailCtrl = TextEditingReactive(this);
-  late final passwordCtrl = TextEditingReactive(this);
-  late final entryAnimation = AnimationReactive(this);
-  late final exitAnimation = AnimationReactive(this);
+  late final emailCtrl = ReactiveTextEditingController(this);
+  late final passwordCtrl = ReactiveTextEditingController(this);
+  late final entryAnimation = ReactiveAnimationController(this);
+  late final exitAnimation = ReactiveAnimationController(this);
 
   @override
   Widget build(BuildContext context) {

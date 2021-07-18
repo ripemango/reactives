@@ -16,18 +16,23 @@ abstract class Reactive with Diagnosticable {
   }
 
   @protected
+  @mustCallSuper
   void didChangeDependencies() {}
 
   @protected
+  @mustCallSuper
   void dispose() {
     host.removeController(this);
   }
 
+  void didUpdateWidget(covariant StatefulWidget oldWidget) {}
+
   @protected
-  void initState() {}
-  @protected
+  @mustCallSuper
   void activate() {}
+
   @protected
+  @mustCallSuper
   void deactivate() {}
 }
 
@@ -89,15 +94,15 @@ mixin ReactiveHostMixin<T extends StatefulWidget> on State<T>
     return completer.future;
   }
 
-  // Callbacks
   @override
-  void initState() {
-    super.initState();
+  void didUpdateWidget(covariant T oldWidget) {
+    super.didUpdateWidget(oldWidget);
     for (final ctrl in reactives) {
-      ctrl.initState();
+      ctrl.didUpdateWidget(oldWidget);
     }
   }
 
+  // Callbacks
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
