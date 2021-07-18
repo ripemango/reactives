@@ -48,9 +48,12 @@ class _AwesomeWidgetState extends State<AwesomeWidget>
 }
 ```
 
-There are a couple of problems here. Most of the object management logic is generic and can be reused. It is extremely easy to forget that one `dispose` call. Using reactives this gets transformed to
+There are a couple of problems here.
+* Most of the object management logic is generic and can be reused.
+* It is extremely easy to forget that one `dispose` call (confession).
+* Coupling the logic to the widget makes it harder to test.
 
-
+Using reactives this gets transformed to,
 ```dart
 class AwesomeReactiveWidget extends StatefulWidget {
   const AwesomeReactiveWidget({Key? key}) : super(key: key);
@@ -73,6 +76,8 @@ class _AwesomeReactiveWidgetState extends State<AwesomeReactiveWidget> with Reac
   }
 }
 ```
+
+See [Examples](https://pub.dev/packages/reactives/example) for examples of writing a reactive or just browse the [source](https://github.com/ripemango/reactives), it's really small.
 
 ### Comparision to [flutter_hooks](https://pub.dev/packages/flutter_hooks):
 

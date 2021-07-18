@@ -1,6 +1,6 @@
 name: reactives
-description: Hooks but for and of Flutter.
-version: 0.1.0
+description: A new way to extract/group/reuse common logic of StatefulWidget. Think of them like React hooks but for and of flutter.
+version: 0.1.1
 repository: https://github.com/ripemango/reactives
 
 environment:

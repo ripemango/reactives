@@ -95,7 +95,7 @@ class ReactiveScrollController extends Reactive {
     bool listen = false,
     VoidCallback? listener,
   })  : ctrl = ctrl ?? ScrollController(),
-        super(host) {          
+        super(host) {
     ReactiveListenable(host, this.ctrl, listen: listen, listener: listener);
   }
 

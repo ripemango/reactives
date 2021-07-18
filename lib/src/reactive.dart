@@ -64,6 +64,7 @@ abstract class ReactiveHost {
 /// }
 /// ```
 ///
+@optionalTypeArgs
 mixin ReactiveHostMixin<T extends StatefulWidget> on State<T>
     implements ReactiveHost {
   // API
