@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Fix concurrent access bug
+
 ## 0.1.1
 
 * Update Docs
