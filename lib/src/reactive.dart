@@ -54,7 +54,7 @@ abstract class ReactiveHost {
 ///   _MyWidgetState createState() => _MyWidgetState();
 /// }
 ///
-/// class _MyWidgetState extends State<MyWidget> with ReactiveBindings {
+/// class _MyWidgetState extends State<MyWidget> with ReactiveHostMixin {
 ///   @override
 ///   Widget build(BuildContext context) {
 ///     return Container();
