@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:reactives/reactives.dart';
 import 'package:reactives/src/ticker.dart';
 
-import 'reactive.dart';
 
 abstract class Disposable {
   void dispose();
