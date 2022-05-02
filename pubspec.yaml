@@ -1,11 +1,10 @@
 name: reactives
 description: A new way to extract/group/reuse common logic of StatefulWidget. Think of them like React hooks but for and of flutter.
-version: 0.2.0
+version: 0.2.1
 repository: https://github.com/ripemango/reactives
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.17.0-0 <3.0.0"
 
 dependencies:
   flutter:

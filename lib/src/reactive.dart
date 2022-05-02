@@ -87,7 +87,7 @@ mixin ReactiveHostMixin<T extends StatefulWidget> on State<T>
   @override
   Future<void> get updateComplete {
     final completer = Completer();
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       completer.complete();
     });
     return completer.future;
